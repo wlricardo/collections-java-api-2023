@@ -21,7 +21,11 @@ public class CarrinhoDeCompras {
                     itensParaRemover.add(item);
                 }
             }
-            listaDeItens.removeAll(itensParaRemover);
+            if (!itensParaRemover.isEmpty()) {
+                listaDeItens.removeAll(itensParaRemover);
+            } else {
+                System.out.println("\n Item não localizado.");
+            }
         } else {
             System.out.println("\n A lista de itens está vazia.");
         }
@@ -48,5 +52,4 @@ public class CarrinhoDeCompras {
             System.out.println("\n A lista de itens está vazia.");
         }
     }
-
 }
